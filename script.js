@@ -1,7 +1,7 @@
+const list_el = document.querySelector('#tasks')
 window.addEventListener('load', () =>{
     const form = document.querySelector('#new-task-form');
     const input = document.querySelector('#new-task-input');
-    const list_el = document.querySelector("#tasks");
 
     form.addEventListener('submit', (e) => {
         e.preventDefault();
@@ -61,4 +61,16 @@ window.addEventListener('load', () =>{
             list_el.removeChild(task_el);
         })
     })
+
+    clearBtn.addEventListener('click', clearTasks)
 })
+
+const clearBtn = document.querySelector('#clear-btn')
+function clearTasks(){
+    if(list_el.innerHTML === ''){
+        alert('task-list is empty')
+    } else{
+        list_el.innerHTML = ''
+    }
+}
+

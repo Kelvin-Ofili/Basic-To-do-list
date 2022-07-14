@@ -136,3 +136,12 @@ main{
     align-items: center;
     justify-content: center;
 }
+.clear-btn{
+    display: flex;
+    justify-content: center;
+}
+#clear-btn{
+    color: red;
+    font-size: 21px;
+    font-weight: 600;
+}
